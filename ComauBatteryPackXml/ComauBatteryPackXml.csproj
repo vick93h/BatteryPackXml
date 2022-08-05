@@ -52,6 +52,7 @@
     <Compile Include="Caricamento.Designer.cs">
       <DependentUpon>Caricamento.cs</DependentUpon>
     </Compile>
+    <Compile Include="Singleton Pattern\DatiScambio.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +64,7 @@
     <Compile Include="RoundedButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Singleton Pattern\Singleton.cs" />
     <Compile Include="XML Classes\prova.cs" />
     <Compile Include="XML Classes\prova.Designer.cs">
       <AutoGen>True</AutoGen>

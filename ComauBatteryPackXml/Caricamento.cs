@@ -16,6 +16,7 @@ namespace ComauBatteryPackXml
 {
     public partial class Caricamento : Form
     {
+        bool esportato = false;
         BackgroundWorker worker;
         public Caricamento()
         {
@@ -149,6 +150,8 @@ namespace ComauBatteryPackXml
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             MessageBox.Show("Esportazione conclusa con successo!");
+            esportato = true;
+            Singleton.CurrentState.DatiScambio.Esportato = esportato;
             this.Close();
         }
     }
