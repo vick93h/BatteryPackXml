@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32630.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComauBatteryPackXml", "ComauBatteryPackXml\ComauBatteryPackXml.csproj", "{BE11644C-F0C9-4822-8521-1A50910C0183}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE11644C-F0C9-4822-8521-1A50910C0183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE11644C-F0C9-4822-8521-1A50910C0183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE11644C-F0C9-4822-8521-1A50910C0183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE11644C-F0C9-4822-8521-1A50910C0183}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {592DFEF6-A176-4669-8DA9-08E93B210F0A}
+	EndGlobalSection
+EndGlobal
