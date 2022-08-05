@@ -47,13 +47,18 @@ namespace ComauBatteryPackXml
                 label2.Visible = true;
             });
             worker.ReportProgress(20);
-            string file = "C:\\Users\\Vittorio\\source\\repos\\ComauBatteryPackXml\\ComauBatteryPackXml\\PLCDB.config";
+            //restituisce \bin\debug
+            string workingDirectory = Environment.CurrentDirectory;
+            //restituisce la directory principale
+            string file = Directory.GetParent(workingDirectory).Parent.FullName;
+            string _fileXml = file +"\\XML folder" +"\\prova.xml";
+            string _filePLC = file+"\\PLCDB.config";
             List<RootFIELD_DATA> list = new List<RootFIELD_DATA>();
             this.Invoke((MethodInvoker)delegate
             {
                 Thread.Sleep(1000);
             });
-            list = (from a in XDocument.Load(file).Descendants("PLC")
+            list = (from a in XDocument.Load(_filePLC).Descendants("PLC")
                     select new RootFIELD_DATA
                     {
                         MSG_ID = (string)a.Attribute("MSG_ID"),
@@ -66,7 +71,7 @@ namespace ComauBatteryPackXml
                         PRGNUM = (string)a.Attribute("PRGNUM"),
                         LINDES = (string)a.Attribute("LINDES"),
                         SUBGROUP_DESCRIPTION = (string)a.Attribute("SUBGROUP_DESCRIPTION"),
-                        PROCESSING_DATA_SECTION = (from f in XDocument.Load("C:\\Users\\Vittorio\\source\\repos\\ComauBatteryPackXml\\ComauBatteryPackXml\\XML folder\\prova.xml").Descendants("TRACED_OPERATION")
+                        PROCESSING_DATA_SECTION = (from f in XDocument.Load(_fileXml).Descendants("TRACED_OPERATION")
                                                    select new RootFIELD_DATAPROCESSING_DATA_SECTIONTRACED_OPERATION
                                                    {
                                                        OPCODE = (string)f.Attribute("OPCODE"),
